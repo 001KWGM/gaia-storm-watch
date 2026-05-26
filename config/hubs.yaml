@@ -1,0 +1,40 @@
+event:
+  public_name: "GAIA Marine Storm Watch"
+  subtitle: "WA Coastal Storm Event Visualiser"
+  start_awst: "2026-05-28 00:00"
+  end_awst: "2026-06-04 23:59"
+  timezone: "Australia/Perth"
+
+hubs:
+  Perth:
+    display_name: "Perth / Fremantle"
+    region: "Perth Metro"
+    lat: -32.056
+    lon: 115.742
+    wave_station: "Rottnest Island"
+    tide_station: "Fremantle"
+    weather_station: "Swanbourne"
+  Geraldton:
+    display_name: "Geraldton"
+    region: "Mid West"
+    lat: -28.777
+    lon: 114.611
+    wave_station: "Geraldton"
+    tide_station: "Geraldton"
+    weather_station: "Geraldton Airport"
+  Bunbury:
+    display_name: "Bunbury / Geographe Bay"
+    region: "South West"
+    lat: -33.327
+    lon: 115.637
+    wave_station: "Cape Naturaliste"
+    tide_station: "Bunbury"
+    weather_station: "Bunbury"
+  Albany:
+    display_name: "Albany"
+    region: "Great Southern"
+    lat: -35.027
+    lon: 117.884
+    wave_station: "Albany"
+    tide_station: "Albany"
+    weather_station: "Albany Airport"

@@ -1,0 +1,16 @@
+sources:
+  bom_observations:
+    display_name: "Bureau of Meteorology public observations"
+    public_link: "https://www.bom.gov.au/wa/observations/"
+    use_in_prototype: "Manual upload or demonstration data only"
+    caveat: "Official forecasts, warnings and observations should be checked directly at bom.gov.au."
+  emergency_wa:
+    display_name: "Emergency WA"
+    public_link: "https://www.emergency.wa.gov.au/"
+    use_in_prototype: "Link-out only"
+    caveat: "Official emergency information should be checked directly at emergency.wa.gov.au."
+  dtmi_wave_tide:
+    display_name: "WA Department of Transport and Major Infrastructure coastal data"
+    public_link: "https://www.transport.wa.gov.au/marine/coastal-data-charts.asp"
+    use_in_prototype: "Manual upload or demonstration data only"
+    caveat: "Near-real-time observations may not be quality controlled. Source metadata, datum and conditions of use should be checked."

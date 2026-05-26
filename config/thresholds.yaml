@@ -1,0 +1,13 @@
+# General-interest thresholds only. These are NOT warnings, alerts, or safety limits.
+wave_hs_m:
+  notable: 2.0
+  elevated: 3.0
+wind_gust_kmh:
+  notable: 60
+  elevated: 90
+rainfall_mm_3h:
+  notable: 10
+  elevated: 25
+water_level_residual_m:
+  notable: 0.20
+  elevated: 0.40

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+.streamlit/secrets.toml
+data/raw/*
+data/normalized/*
+data/archive/*
+exports/internal_logs/*
+!data/raw/.gitkeep
+!data/normalized/.gitkeep
+!data/archive/.gitkeep
+!exports/internal_logs/.gitkeep
