@@ -1,74 +1,81 @@
-# GAIA Marine Storm Watch v0.1
+# GAIA Marine Storm Watch v0.2
 
-Educational WA coastal storm event visualiser / public-data demonstrator.
+Educational public-data visualisation for Western Australian coastal storm events.
 
-This prototype is deliberately **not** an official warning, forecast, emergency advice product, marine safety tool, or operational decision-support system.
+This app is designed for general interest and GAIA Marine capability demonstration only. It is not an official forecast, warning, emergency advice product, marine safety tool, or operational decision-support system.
 
-## What this prototype does
+## What v0.2 includes
 
-- Runs immediately using synthetic demonstration data.
-- Allows optional CSV upload for public-source data once source formats are confirmed.
-- Shows a WA hub map for Perth, Geraldton, Bunbury and Albany.
-- Shows event snapshot cards.
-- Shows stacked storm timeline plots: wind/pressure, rainfall, wave conditions, water-level/residual indicator.
-- Shows hub comparison charts.
-- Shows source transparency and caveats.
-- Produces a processed CSV in `data/processed/master_conditions.csv`.
+- GAIA Marine branded Streamlit interface.
+- Synthetic demonstration data that runs immediately.
+- Optional CSV upload and flexible column normalisation.
+- Four coastal hubs: Perth, Geraldton, Bunbury and Albany.
+- Event snapshot cards.
+- WA hub map.
+- Event-shape overview.
+- Stacked storm timeline charts.
+- Hub comparison charts.
+- General-interest indicator counts.
+- Data coverage heatmap.
+- Source transparency tab.
+- Downloadable processed CSV.
+- Downloadable Markdown event digest.
+- Prototype interest form using a pre-filled email link instead of storing personal data.
 
-## What this prototype does not do yet
+## Local run
 
-- It does not scrape BOM, Emergency WA, or WA DTMI websites.
-- It does not reproduce BOM radar imagery.
-- It does not provide official warnings or emergency advice.
-- It does not include lead capture yet.
-- It does not label residual water level as storm surge unless a validated calculation is added.
-
-## First run on local computer
-
-Open PowerShell or Terminal in this folder and run:
-
-```bash
+```powershell
 python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-The app should open in your browser.
+Or double-click:
 
-## First run on Streamlit Community Cloud
+```text
+run_local.bat
+```
 
-1. Create a new private GitHub repository, for example `gaia-storm-watch`.
-2. Upload all files from this folder.
-3. Go to Streamlit Community Cloud.
-4. Connect the GitHub repo.
-5. Set the app entrypoint to `app.py`.
-6. Deploy.
+## Streamlit Cloud deployment
 
-Streamlit Community Cloud deploys directly from GitHub and updates when you push changes.
+Main file path:
 
-## Data upload notes
+```text
+app.py
+```
 
-The uploader is flexible but not magic. It tries to detect common column names:
+No secrets are required for this version.
 
-- timestamp, datetime, date_time, time, date
-- hub, location, station, site
-- hs, Hm0, significant wave height
-- gust, wind gust, wind_gust_kmh
-- rain, rainfall, rain_mm
-- tide, water level, observed water level
-- residual, anomaly, surge
+## Updating from v0.1 in GitHub Desktop
 
-For external publication, build a proper source-specific importer after confirming the actual downloaded CSV headers and metadata.
+1. Copy the contents of this v0.2 folder into your existing local `gaia-storm-watch` repository folder.
+2. Allow Windows to replace existing files.
+3. Open GitHub Desktop.
+4. Confirm changed files appear.
+5. Summary: `Upgrade to GAIA Storm Watch v0.2`
+6. Click `Commit to main`.
+7. Click `Push origin`.
+8. Streamlit should redeploy automatically.
 
-## Legal / publication notes
+## Upload CSV format
 
-Before publishing externally:
+The app accepts flexible column names. Best practice is to use this canonical structure:
 
-- Replace synthetic demonstration data with real uploaded public-source data or clearly label the app as demo-only.
-- Check each data source's terms, copyright, attribution and disclaimers.
-- Do not state that BOM or WA DTMI data is reproduced with permission unless GAIA has that permission.
-- Do not present the dashboard as a warning, safety, navigation, emergency or authority product.
-- Link users to BOM and Emergency WA for official information.
+```text
+timestamp_awst,hub,wind_speed_kmh,wind_gust_kmh,wind_direction_deg,rainfall_mm,air_pressure_hpa,wave_hs_m,wave_hmax_m,wave_tp_s,wave_direction_deg,water_level_m,predicted_tide_m,water_level_residual_m
+```
 
-## Recommended next upgrade
+Timestamps are interpreted as AWST if no timezone is supplied.
 
-Add a `data/manual_upload_templates/gaia_storm_watch_upload_template.csv` and source-specific importers once the actual DOT/BOM CSV formats are confirmed.
+## Publication discipline
+
+Before public release:
+
+- Keep official BOM / Emergency WA links visible.
+- Do not describe this as an emergency, warning, safety or operational decision-support tool.
+- Do not label water-level residual as storm surge unless independently validated.
+- Do not reproduce BOM radar/camera products unless permission and terms are checked.
+- Replace synthetic data with checked public-source data and preserve source caveats.
+
+## Legal / source note
+
+Source data remains subject to the relevant agency terms, copyright, disclaimers and conditions of use. GAIA Marine has processed and visualised information independently for general interest and capability demonstration.

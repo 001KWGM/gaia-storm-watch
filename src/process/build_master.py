@@ -3,9 +3,14 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 import math
+import sys
 import numpy as np
 import pandas as pd
 import pytz
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from src.utils.config import load_hubs
 from src.utils.paths import PROCESSED_DIR, ARCHIVE_DIR
