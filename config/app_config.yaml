@@ -6,7 +6,7 @@ public_app:
   allow_public_threshold_controls: false
   show_public_data_download: false
   show_public_digest_download: true
-  enable_auto_weather_context: true
+  enable_auto_weather_context: false
   enable_official_camera_page_preview: true
   default_hub: Perth
   default_compare_metric: wave_hs_m
@@ -23,5 +23,8 @@ public_app:
   show_bom_weather_external_links: true
   legal_position: Not official emergency, forecast, marine-safety, operational or
     commercial decision advice.
-  default_time_viewer_position: peak
+  default_time_viewer_position: latest
   enable_time_viewer: true
+
+  simplified_public_layout: true
+  cap_display_at_latest_available_record: true

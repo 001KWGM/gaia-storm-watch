@@ -81,8 +81,17 @@ def _phase_multiplier(t_hours: np.ndarray, peak_offset_hours: float) -> np.ndarr
 def build_demo_master() -> pd.DataFrame:
     cfg = load_hubs()
     hubs = cfg["hubs"]
-    start = pd.Timestamp(cfg["event"]["start_awst"], tz="Australia/Perth")
-    end = pd.Timestamp(cfg["event"]["end_awst"], tz="Australia/Perth")
+    # Public demo data must not show future values as if they are observations.
+    # Build records only up to the lesser of event end and current AWST time.
+    configured_start = pd.Timestamp(cfg["event"]["start_awst"], tz="Australia/Perth")
+    configured_end = pd.Timestamp(cfg["event"]["end_awst"], tz="Australia/Perth")
+    now_awst = pd.Timestamp.now(tz="Australia/Perth").floor("3h")
+    end = min(configured_end, now_awst)
+    start = configured_start
+    # If the configured event has not started yet, provide a short approach-context
+    # dataset ending now so the public prototype still renders without future records.
+    if start > end:
+        start = end - pd.Timedelta(hours=24)
     idx = pd.date_range(start, end, freq="3h")
     rows = []
     ingested = pd.Timestamp.now(tz="Australia/Perth").strftime("%Y-%m-%d %H:%M:%S %Z")

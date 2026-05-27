@@ -1,7 +1,7 @@
 event:
   public_name: "GAIA Marine Storm Watch"
-  subtitle: "WA Coastal Storm Event Visualiser"
-  start_awst: "2026-05-28 00:00"
+  subtitle: "WA Coastal Storm Event Viewer"
+  start_awst: "2026-05-27 00:00"
   end_awst: "2026-06-04 23:59"
   timezone: "Australia/Perth"
 

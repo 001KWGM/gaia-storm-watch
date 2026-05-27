@@ -1,5 +1,5 @@
 hub,records,first_record_awst,latest_record_awst,source_mode,missing_wave_records,missing_wind_records,missing_water_level_records
-Albany,64,2026-05-28 00:00:00+08:00,2026-06-04 21:00:00+08:00,Synthetic demonstration data,0,0,0
-Bunbury,64,2026-05-28 00:00:00+08:00,2026-06-04 21:00:00+08:00,Synthetic demonstration data,0,0,0
-Geraldton,64,2026-05-28 00:00:00+08:00,2026-06-04 21:00:00+08:00,Synthetic demonstration data,0,0,0
-Perth,64,2026-05-28 00:00:00+08:00,2026-06-04 21:00:00+08:00,Synthetic demonstration data,0,0,0
+Albany,4,2026-05-27 00:00:00+08:00,2026-05-27 09:00:00+08:00,Synthetic demonstration data,0,0,0
+Bunbury,4,2026-05-27 00:00:00+08:00,2026-05-27 09:00:00+08:00,Synthetic demonstration data,0,0,0
+Geraldton,4,2026-05-27 00:00:00+08:00,2026-05-27 09:00:00+08:00,Synthetic demonstration data,0,0,0
+Perth,4,2026-05-27 00:00:00+08:00,2026-05-27 09:00:00+08:00,Synthetic demonstration data,0,0,0
