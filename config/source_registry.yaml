@@ -1,16 +1,47 @@
 sources:
-  bom_observations:
-    display_name: "Bureau of Meteorology public observations"
-    public_link: "https://www.bom.gov.au/wa/observations/"
-    use_in_prototype: "Manual upload or demonstration data only"
-    caveat: "Official forecasts, warnings and observations should be checked directly at bom.gov.au."
+  open_meteo_weather:
+    display_name: Open-Meteo weather model API
+    use_in_prototype: Optional automatic weather-context fetch for wind, rainfall,
+      pressure and temperature.
+    public_link: https://open-meteo.com/en/docs
+    caveat: Model/API weather context for general-interest visualisation only. Not
+      official warning or emergency advice. General-interest display only; not for
+      commercial reliance or operational decision-making.
+  dtmi_wave_data:
+    display_name: WA DTMI coastal wave data
+    use_in_prototype: Linked as official public source; upload parser available for
+      checked CSVs.
+    public_link: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coastal-data-charts/wave-data
+    caveat: Use subject to DTMI disclaimer, copyright and conditions of use. Near-real-time
+      data may not be quality controlled. General-interest display only; not for commercial
+      reliance or operational decision-making.
+  dtmi_tide_data:
+    display_name: WA DTMI tide and water-level data
+    use_in_prototype: Linked as official public source; upload parser available for
+      checked CSVs.
+    public_link: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coastal-data-charts/tide-data
+    caveat: Observed water level must not be described as storm surge unless residual
+      calculation is validated. General-interest display only; not for commercial
+      reliance or operational decision-making.
+  dtmi_coast_cams:
+    display_name: WA DTMI coast cameras
+    use_in_prototype: Official camera link cards and optional official-page preview.
+      No image scraping or archiving.
+    public_link: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coast-cams
+    caveat: Camera information remains subject to DTMI disclaimer, privacy, copyright
+      and conditions of use. General-interest display only; not for commercial reliance
+      or operational decision-making.
+  bom_warnings:
+    display_name: Bureau of Meteorology WA warnings
+    use_in_prototype: External official link only.
+    public_link: https://www.bom.gov.au/wa/warnings/
+    caveat: Official warnings must be read at source. This app does not reproduce
+      or interpret warnings. General-interest display only; not for commercial reliance
+      or operational decision-making.
   emergency_wa:
-    display_name: "Emergency WA"
-    public_link: "https://www.emergency.wa.gov.au/"
-    use_in_prototype: "Link-out only"
-    caveat: "Official emergency information should be checked directly at emergency.wa.gov.au."
-  dtmi_wave_tide:
-    display_name: "WA Department of Transport and Major Infrastructure coastal data"
-    public_link: "https://www.transport.wa.gov.au/marine/coastal-data-charts.asp"
-    use_in_prototype: "Manual upload or demonstration data only"
-    caveat: "Near-real-time observations may not be quality controlled. Source metadata, datum and conditions of use should be checked."
+    display_name: Emergency WA
+    use_in_prototype: External official link only.
+    public_link: https://www.emergency.wa.gov.au/
+    caveat: Official emergency information must be read at source. This app does not
+      reproduce or interpret emergency warnings. General-interest display only; not
+      for commercial reliance or operational decision-making.

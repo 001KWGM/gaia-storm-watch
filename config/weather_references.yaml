@@ -1,0 +1,51 @@
+weather_references:
+- name: BOM WA Warnings
+  type: Official warnings link
+  role: Official weather warnings and forecast context
+  source: Bureau of Meteorology
+  url: https://www.bom.gov.au/wa/warnings/
+  display_mode: external_link
+  time_alignment: Live official source page; timestamp shown by source
+  caveat: Linked externally only. GAIA Marine does not reproduce or reinterpret official
+    warnings.
+- name: BOM Perth Radar
+  type: Radar reference
+  role: Rain band and storm movement visual reference
+  source: Bureau of Meteorology
+  url: https://www.bom.gov.au/products/IDR703.loop.shtml
+  display_mode: external_link
+  time_alignment: Live official radar loop; timestamp shown by source
+  caveat: Linked externally only in this prototype. Radar imagery is not downloaded,
+    archived or rehosted by GAIA Marine.
+- name: BOM Weather Maps
+  type: Synoptic / isobar reference
+  role: Broad pressure-system and frontal context
+  source: Bureau of Meteorology
+  url: https://www.bom.gov.au/australia/charts/
+  display_mode: external_link
+  time_alignment: Live official source page; chart validity time shown by source
+  caveat: Linked externally only. Use source validity times for exact chart timing.
+- name: BOM 4-Day Forecast Chart
+  type: Synoptic forecast chart
+  role: Approaching and aftermath weather-pattern context
+  source: Bureau of Meteorology
+  url: https://www.bom.gov.au/australia/charts/4day_col.shtml
+  display_mode: external_link
+  time_alignment: Forecast chart validity time shown by source
+  caveat: Linked externally only. Not reproduced in the dashboard.
+- name: BOM Satellite Images
+  type: Satellite reference
+  role: Cloud-band and system-scale visual context
+  source: Bureau of Meteorology
+  url: https://www.bom.gov.au/australia/satellite/
+  display_mode: external_link
+  time_alignment: Live official source page; timestamp shown by source
+  caveat: Linked externally only in this prototype.
+- name: Emergency WA
+  type: Official emergency information
+  role: Official emergency and incident information
+  source: Government of Western Australia
+  url: https://www.emergency.wa.gov.au/
+  display_mode: external_link
+  time_alignment: Live official source page; timestamp shown by source
+  caveat: Linked externally only. GAIA Marine does not provide emergency advice.

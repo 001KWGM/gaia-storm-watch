@@ -1,0 +1,52 @@
+coast_cams:
+- name: Swanbourne Beach
+  hub: Perth
+  region: Perth Metro
+  official_url: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coast-cams/swanbourne
+  view_note: South-westerly field of view; official page states a new image is captured
+    every minute.
+  source: WA Department of Transport and Major Infrastructure coast cam
+  timestamp_note: Official source page timestamp where available
+- name: Trigg Point
+  hub: Perth
+  region: Perth Metro
+  official_url: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coast-cams/trigg-point
+  view_note: Official DTMI coast cam page.
+  source: WA Department of Transport and Major Infrastructure coast cam
+  timestamp_note: Official source page timestamp where available
+- name: Fremantle Fishing Boat Harbour
+  hub: Perth
+  region: Perth Metro
+  official_url: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coast-cams/fremantle-fishing-boat-harbour
+  view_note: Official DTMI coast cam page.
+  source: WA Department of Transport and Major Infrastructure coast cam
+  timestamp_note: Official source page timestamp where available
+- name: Geraldton
+  hub: Geraldton
+  region: Mid West
+  official_url: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coast-cams/geraldton
+  view_note: Official DTMI coast cam page.
+  source: WA Department of Transport and Major Infrastructure coast cam
+  timestamp_note: Official source page timestamp where available
+- name: Bunbury Storm Surge Gate
+  hub: Bunbury
+  region: South West
+  official_url: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coast-cams/bunbury-storm-surge-gate-cam
+  view_note: Official page states the camera views the storm surge gate status and
+    a new image is captured every minute.
+  source: WA Department of Transport and Major Infrastructure coast cam
+  timestamp_note: Official source page timestamp where available
+- name: Albany
+  hub: Albany
+  region: Great Southern
+  official_url: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coast-cams/albany
+  view_note: Official DTMI coast cam page.
+  source: WA Department of Transport and Major Infrastructure coast cam
+  timestamp_note: Official source page timestamp where available
+- name: Lancelin
+  hub: Perth
+  region: Mid West / Perth north context
+  official_url: https://www.transport.wa.gov.au/marine/charts-warnings-current-conditions/coast-cams/lancelin
+  view_note: Optional additional storm-context camera north of Perth.
+  source: WA Department of Transport and Major Infrastructure coast cam
+  timestamp_note: Official source page timestamp where available

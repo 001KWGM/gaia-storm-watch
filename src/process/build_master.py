@@ -19,7 +19,7 @@ AWST = pytz.timezone("Australia/Perth")
 CANONICAL_COLUMNS = [
     "timestamp_awst", "timestamp_utc", "hub", "display_name", "region", "latitude", "longitude",
     "source_mode", "source_agency", "source_dataset", "source_quality_note",
-    "wind_speed_kmh", "wind_gust_kmh", "wind_direction_deg", "rainfall_mm", "air_pressure_hpa",
+    "wind_speed_kmh", "wind_gust_kmh", "wind_direction_deg", "rainfall_mm", "air_pressure_hpa", "air_temperature_degC",
     "wave_hs_m", "wave_hmax_m", "wave_tp_s", "wave_direction_deg",
     "water_level_m", "predicted_tide_m", "water_level_residual_m", "datum",
     "data_status", "qa_flag", "qa_comment", "ingested_at_awst"
@@ -33,6 +33,7 @@ COLUMN_ALIASES = {
     "wind_direction_deg": ["wind_direction_deg", "wind_dir", "wind direction", "wd", "wind_deg"],
     "rainfall_mm": ["rainfall_mm", "rain_mm", "rain", "rainfall", "precip_mm"],
     "air_pressure_hpa": ["air_pressure_hpa", "pressure_hpa", "barometer", "mslp", "pressure"],
+    "air_temperature_degC": ["air_temperature_degC", "temperature", "temperature_2m", "air temp", "air temperature", "temp"],
     "wave_hs_m": ["wave_hs_m", "hs", "significant wave height", "h_sig", "hm0", "sig_wave_height"],
     "wave_hmax_m": ["wave_hmax_m", "hmax", "maximum wave height", "max wave height"],
     "wave_tp_s": ["wave_tp_s", "tp", "peak period", "peak_period", "period"],
@@ -96,6 +97,7 @@ def build_demo_master() -> pd.DataFrame:
         gust = 28 + 76 * storm + 28 * secondary + rng.normal(0, 2.5, len(idx))
         rain = np.maximum(0, 1.5 + 21 * storm + 8 * secondary + rng.normal(0, 2.0, len(idx)))
         pressure = 1015 - 28 * storm - 8 * secondary + rng.normal(0, 0.8, len(idx))
+        temp = 22 - 2.5 * storm + rng.normal(0, 0.4, len(idx))
         water = 0.75 + 0.45 * np.sin(np.linspace(0, 14 * math.pi, len(idx))) + 0.32 * storm
         pred = 0.75 + 0.45 * np.sin(np.linspace(0, 14 * math.pi, len(idx)))
         resid = water - pred
@@ -117,6 +119,7 @@ def build_demo_master() -> pd.DataFrame:
                 "wind_direction_deg": (230 + 35 * np.sin(i / 6)) % 360,
                 "rainfall_mm": rain[i],
                 "air_pressure_hpa": pressure[i],
+                "air_temperature_degC": temp[i],
                 "wave_hs_m": max(0, wave[i]),
                 "wave_hmax_m": max(0, wave[i] * 1.75),
                 "wave_tp_s": 7 + 5 * storm[i] + rng.normal(0, 0.2),

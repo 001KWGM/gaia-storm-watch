@@ -1,0 +1,25 @@
+public_app:
+  mode: public_display
+  audience: general_interest
+  allow_public_uploads: false
+  allow_public_processing_controls: false
+  allow_public_threshold_controls: false
+  show_public_data_download: false
+  show_public_digest_download: true
+  enable_auto_weather_context: true
+  enable_official_camera_page_preview: true
+  default_hub: Perth
+  default_compare_metric: wave_hs_m
+  public_data_mode_label: Curated public display / general-interest visualisation
+  internal_note: All source choices, thresholds, processing settings and updates are
+    controlled internally by GAIA Marine. Public users can only select/view curated
+    dashboard content.
+  require_registration: true
+  registration_storage: google_sheets_with_local_fallback
+  registration_sheet_name: Registrations
+  contact_email: solutions@gaia-marine.ai
+  website_url: https://gaia-marine.com.au
+  enable_weather_reference_board: true
+  show_bom_weather_external_links: true
+  legal_position: Not official emergency, forecast, marine-safety, operational or
+    commercial decision advice.
