@@ -23,3 +23,5 @@ public_app:
   show_bom_weather_external_links: true
   legal_position: Not official emergency, forecast, marine-safety, operational or
     commercial decision advice.
+  default_time_viewer_position: peak
+  enable_time_viewer: true
